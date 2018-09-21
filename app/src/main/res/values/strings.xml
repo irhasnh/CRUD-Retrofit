@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CRUD Apps</string>
+    <string name="nim">NIM</string>
+    <string name="name">Nama</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="notelp">NO TELPON</string>
+    <string name="update">Update</string>
+    <string name="masukkan_alamat">Masukkan Alamat</string>
+    <string name="masukkan_no_telpon">Masukkan No Telpon</string>
+    <string name="masukkan_nama">Masukkan Nama</string>
+    <string name="masukkan_nim">Masukkan Nim</string>
+    <string name="action_settings">Setting</string>
+    <string name="delete">Delete</string>
+</resources>
