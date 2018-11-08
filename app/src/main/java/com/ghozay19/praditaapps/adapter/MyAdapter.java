@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ghozay19.praditaapps.UpdateDeleteActivity;
+import com.ghozay19.praditaapps.mahasiswa.DetailMahasiswaActivity;
 import com.ghozay19.praditaapps.model.Mahasiswa;
 import com.ghozay19.praditaapps.R;
 
@@ -38,15 +38,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.tvNim.setText(mList.get(position).getMahasiswaNim());
         holder.tvNama.setText(mList.get(position).getMahasiswaNama());
-        holder.tvAlamat.setText(mList.get(position).getMahasiswaAlamat());
-        holder.tvNoTelp.setText(mList.get(position).getMahasiswaNotelp());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent i = new Intent(holder.itemView.getContext(),
-                        UpdateDeleteActivity.class);
+                        DetailMahasiswaActivity.class);
                 i.putExtra("id", mList.get(position).getMahasiswaId());
                 i.putExtra("nim", mList.get(position).getMahasiswaNim());
                 i.putExtra("nama", mList.get(position).getMahasiswaNama());
@@ -70,10 +68,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public ViewHolder(View v) {
             super(v);
 
-            tvNim = v.findViewById(R.id.txt_nim);
-            tvNama = v.findViewById(R.id.txt_nama);
-            tvAlamat = v.findViewById(R.id.txt_alamat);
-            tvNoTelp = v.findViewById(R.id.txt_notelp);
+            tvNim = v.findViewById(R.id.tvNim);
+            tvNama = v.findViewById(R.id.tvNama);
+
 
         }
     }

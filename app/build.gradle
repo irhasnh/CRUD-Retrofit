@@ -9,11 +9,22 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"http://gojaydroid.000webhostapp.com/crud/\""
+        buildConfigField "String", "INSERT_MAHASISWA", "\"mahasiswa/insert.php\""
+        buildConfigField "String", "READ_MAHASISWA", "\"mahasiswa/read.php\""
+        buildConfigField "String", "UPDATE_MAHASISWA", "\"mahasiswa/update.php\""
+        buildConfigField "String", "DELETE_MAHASISWA", "\"mahasiswa/delete.php\""
+        buildConfigField "String", "INSERT_DOSEN", "\"dosen/insert.php\""
+        buildConfigField "String", "READ_DOSEN", "\"dosen/read.php\""
+        buildConfigField "String", "UPDATE_DOSEN", "\"dosen/update.php\""
+        buildConfigField "String", "DELETE_DOSEN", "\"dosen/delete.php\""
+        buildConfigField "String", "REQ_LOGIN", "\"user/login_user.php\""
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
 }

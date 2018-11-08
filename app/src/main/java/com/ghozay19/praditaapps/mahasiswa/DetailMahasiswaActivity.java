@@ -1,18 +1,16 @@
-package com.ghozay19.praditaapps;
+package com.ghozay19.praditaapps.mahasiswa;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.ghozay19.praditaapps.model.Mahasiswa;
+import com.ghozay19.praditaapps.HomeActivity;
+import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.model.ResponsModel;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,19 +19,18 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class UpdateDeleteActivity extends AppCompatActivity {
+public class DetailMahasiswaActivity extends AppCompatActivity {
 
 
-    private List<Mahasiswa> mItems = new ArrayList<>();
-
-    @BindView(R.id.edt_nim_inputan)
+    @BindView(R.id.edtNim)
     EditText edtNim;
-    @BindView(R.id.edt_nama_inputan)
+    @BindView(R.id.edtNama)
     EditText edtNama;
-    @BindView(R.id.edt_alamat_inputan)
+    @BindView(R.id.edtAlamat)
     EditText edtAlamat;
-    @BindView(R.id.edt_notelp_inputan)
+    @BindView(R.id.edtNoTelp)
     EditText edtNoTelp;
+
 
     String id, nim, nama, alamat, notelp;
 
@@ -75,14 +72,14 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                 Log.d("Update Data","Hasilnya adalah -> " + response.body().getKode());
 
                 if (kode.equals("1")) {
-                    Toast.makeText(UpdateDeleteActivity.this, "Data berhasil diperbaharui", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailMahasiswaActivity.this, getString(R.string.datasuksesperbarui), Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(UpdateDeleteActivity.this, "Data Error tidak berhasil diperbaharui", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailMahasiswaActivity.this, getString(R.string.dataerorperbarui), Toast.LENGTH_SHORT).show();
 
                 }
 
-                Intent intent = new Intent(UpdateDeleteActivity.this, Main2Activity.class);
+                Intent intent = new Intent(DetailMahasiswaActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
 
@@ -107,14 +104,14 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                 Log.d("Delete Data","Hasilnya adalah -> " + response.body().getKode());
                 if (kode.equals("1")){
                     Log.d("idnya","adalah"+id);
-                    Toast.makeText(UpdateDeleteActivity.this, "Data berhasil dihapus", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailMahasiswaActivity.this, getString(R.string.sukseshapus), Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(UpdateDeleteActivity.this, "Data Error tidak berhasil dihapus", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailMahasiswaActivity.this, getString(R.string.gagaldihapus), Toast.LENGTH_SHORT).show();
 
                 }
 
-                Intent intent = new Intent(UpdateDeleteActivity.this,Main2Activity.class);
+                Intent intent = new Intent(DetailMahasiswaActivity.this,HomeActivity.class);
                 startActivity(intent);
                 }
 

@@ -1,15 +1,16 @@
-package com.ghozay19.praditaapps;
+package com.ghozay19.praditaapps.mahasiswa;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.Toast;
 
+import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.adapter.MyAdapter;
 import com.ghozay19.praditaapps.model.Mahasiswa;
 import com.ghozay19.praditaapps.model.ResponsModel;
@@ -20,11 +21,15 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ReadMahasiswaActivity extends AppCompatActivity {
+
+
+
 
 
     @BindView(R.id.rv_mahasiswa)
@@ -33,11 +38,17 @@ public class ReadMahasiswaActivity extends AppCompatActivity {
     MyAdapter adapter;
     private List<Mahasiswa> mItems = new ArrayList<>();
 
+    @OnClick(R.id.btnAdd)
+    void Send(){
+        Intent intent = new Intent(this,AddMahasiswaActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_read_mahasiswa);
+        setContentView(R.layout.activity_mahasiswa);
 
         ButterKnife.bind(this);
 
@@ -59,7 +70,7 @@ public class ReadMahasiswaActivity extends AppCompatActivity {
 
                 mItems = response.body().getResult();
                 Log.d("Read Data","Hasilnya adalah -> " + response.body().getKode());
-
+                  
                 recyclerView.setAdapter(new MyAdapter(getApplicationContext(),mItems));
                 adapter.notifyDataSetChanged();
 

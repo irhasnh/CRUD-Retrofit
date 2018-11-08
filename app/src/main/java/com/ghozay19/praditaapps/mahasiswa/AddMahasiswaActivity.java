@@ -1,18 +1,16 @@
-package com.ghozay19.praditaapps;
+package com.ghozay19.praditaapps.mahasiswa;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.ghozay19.praditaapps.model.Mahasiswa;
+import com.ghozay19.praditaapps.HomeActivity;
+import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.model.ResponsModel;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +21,6 @@ import retrofit2.Response;
 
 public class AddMahasiswaActivity extends AppCompatActivity {
 
-    private List<Mahasiswa> mItems = new ArrayList<>();
 
     @BindView(R.id.edt_nim_inputan)
     EditText edtNim;
@@ -63,14 +60,14 @@ public class AddMahasiswaActivity extends AppCompatActivity {
                 Log.d("Add Data","Hasilnya adalah -> " + response.body().getPesan());
 
                 if (kode.equals("1")) {
-                    Toast.makeText(AddMahasiswaActivity.this, "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddMahasiswaActivity.this, getString(R.string.suksessimpan), Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(AddMahasiswaActivity.this, "Data Error tidak berhasil disimpan", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddMahasiswaActivity.this, getString(R.string.gagalsimpan), Toast.LENGTH_SHORT).show();
 
                 }
 
-                Intent intent = new Intent(AddMahasiswaActivity.this,Main2Activity.class);
+                Intent intent = new Intent(AddMahasiswaActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
 

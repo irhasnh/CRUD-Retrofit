@@ -11,17 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReadMahasiswaActivity" />
-        <activity android:name=".DetailMahasiswaActivity" />
-        <activity android:name=".AddMahasiswaActivity" />
-        <activity android:name=".UpdateDeleteActivity"></activity>
+        <activity android:name=".mahasiswa.ReadMahasiswaActivity" />
+        <activity android:name=".mahasiswa.DosenActivity" />
+        <activity android:name=".mahasiswa.AddMahasiswaActivity" />
+        <activity android:name=".mahasiswa.DetailMahasiswaActivity"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CRUD Apps</string>
+    <string name="app_name">Pradita Apps</string>
     <string name="nim">NIM</string>
     <string name="name">Nama</string>
     <string name="alamat">ALAMAT</string>
@@ -11,4 +11,10 @@
     <string name="masukkan_nim">Masukkan Nim</string>
     <string name="action_settings">Setting</string>
     <string name="delete">Delete</string>
+    <string name="datasuksesperbarui">Data berhasil diperbaharui</string>
+    <string name="dataerorperbarui">Data Error tidak berhasil diperbaharui</string>
+    <string name="sukseshapus">Data berhasil dihapus</string>
+    <string name="gagaldihapus">Data Error tidak berhasil dihapus</string>
+    <string name="suksessimpan">Data berhasil disimpan</string>
+    <string name="gagalsimpan">Data Error tidak berhasil disimpan</string>
 </resources>
