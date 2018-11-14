@@ -2,11 +2,8 @@ package com.ghozay19.praditaapps.model;
 
 import java.util.List;
 
-/**
- * Created by hakiki95 on 4/16/2017.
- */
 
-public class ResponsModel {
+public class ResponsMahasiswa {
 
     String kode, pesan;
     List<Mahasiswa> result;

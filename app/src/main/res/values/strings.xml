@@ -17,4 +17,6 @@
     <string name="gagaldihapus">Data Error tidak berhasil dihapus</string>
     <string name="suksessimpan">Data berhasil disimpan</string>
     <string name="gagalsimpan">Data Error tidak berhasil disimpan</string>
+    <string name="addDosen">Add Dosen</string>
+    <string name="addMahasiswa">Add Mahasiswa</string>
 </resources>

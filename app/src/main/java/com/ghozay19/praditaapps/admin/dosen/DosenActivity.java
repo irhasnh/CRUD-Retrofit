@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.mahasiswa;
+package com.ghozay19.praditaapps.admin.dosen;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -11,9 +11,14 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.adapter.MyAdapter;
+import com.ghozay19.praditaapps.admin.adapter.DosenAdapter;
+import com.ghozay19.praditaapps.admin.adapter.MahasiswaAdapter;
+import com.ghozay19.praditaapps.admin.mahasiswa.AddMahasiswaActivity;
+import com.ghozay19.praditaapps.admin.mahasiswa.ReadMahasiswaActivity;
+import com.ghozay19.praditaapps.model.Dosen;
 import com.ghozay19.praditaapps.model.Mahasiswa;
-import com.ghozay19.praditaapps.model.ResponsModel;
+import com.ghozay19.praditaapps.model.ResponsMahasiswa;
+import com.ghozay19.praditaapps.model.ResponseDosen;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 
 import java.util.ArrayList;
@@ -26,21 +31,20 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ReadMahasiswaActivity extends AppCompatActivity {
-
-
-
+public class DosenActivity extends AppCompatActivity {
 
 
     @BindView(R.id.rv_mahasiswa)
     RecyclerView recyclerView;
     Context context;
-    MyAdapter adapter;
-    private List<Mahasiswa> mItems = new ArrayList<>();
+    DosenAdapter adapter;
+    private List<Dosen> mItems = new ArrayList<>();
 
+
+    //TODO ganti ke Add DOSEN
     @OnClick(R.id.btnAdd)
     void Send(){
-        Intent intent = new Intent(this,AddMahasiswaActivity.class);
+        Intent intent = new Intent(this,AddDosen.class);
         startActivity(intent);
     }
 
@@ -48,12 +52,12 @@ public class ReadMahasiswaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mahasiswa);
+        setContentView(R.layout.activity_dosen);
 
         ButterKnife.bind(this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        adapter = new MyAdapter(getApplicationContext(), mItems);
+        adapter = new DosenAdapter(getApplicationContext(), mItems);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
@@ -63,25 +67,25 @@ public class ReadMahasiswaActivity extends AppCompatActivity {
     private void ReadData() {
         final ProgressDialog dialog = ProgressDialog.show(this, "", "Fetching Data....", false);
 
-        ConfigRetrofit.service.getAllData().enqueue(new Callback<ResponsModel>() {
+        ConfigRetrofit.service.getAllDosen().enqueue(new Callback<ResponseDosen>() {
             @Override
-            public void onResponse(Call<ResponsModel> call, Response<ResponsModel> response) {
+            public void onResponse(Call<ResponseDosen> call, Response<ResponseDosen> response) {
                 dialog.dismiss();
 
                 mItems = response.body().getResult();
                 Log.d("Read Data","Hasilnya adalah -> " + response.body().getKode());
-                  
-                recyclerView.setAdapter(new MyAdapter(getApplicationContext(),mItems));
+
+                recyclerView.setAdapter(new DosenAdapter(getApplicationContext(),mItems));
                 adapter.notifyDataSetChanged();
 
             }
 
             @Override
-            public void onFailure(Call<ResponsModel> call, Throwable t) {
+            public void onFailure(Call<ResponseDosen> call, Throwable t) {
                 dialog.dismiss();
 
                 Log.d("Read Data Error ","Karena -> "+t.getMessage());
-                Toast.makeText(ReadMahasiswaActivity.this, " Koneksi EROR",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DosenActivity.this, " Koneksi EROR",Toast.LENGTH_SHORT).show();
             }
         });
 

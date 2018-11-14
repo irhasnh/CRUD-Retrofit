@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.adapter;
+package com.ghozay19.praditaapps.admin.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,25 +8,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ghozay19.praditaapps.mahasiswa.DetailMahasiswaActivity;
+import com.ghozay19.praditaapps.admin.mahasiswa.DetailMahasiswaActivity;
 import com.ghozay19.praditaapps.model.Mahasiswa;
 import com.ghozay19.praditaapps.R;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.ViewHolder> {
 
     private List<Mahasiswa> mList;
     private Context ctx;
 
 
-    public MyAdapter(Context ctx, List<Mahasiswa> mList) {
+    public MahasiswaAdapter(Context ctx, List<Mahasiswa> mList) {
         this.ctx = ctx;
         this.mList = mList;
     }
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MahasiswaAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_mahasiswa, parent, false);
 

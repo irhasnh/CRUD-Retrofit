@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.mahasiswa;
+package com.ghozay19.praditaapps.admin.mahasiswa;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.ghozay19.praditaapps.HomeActivity;
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.model.ResponsModel;
+import com.ghozay19.praditaapps.model.ResponsMahasiswa;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 
 import butterknife.BindView;
@@ -63,9 +63,9 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         alamat = edtAlamat.getText().toString().trim();
         notelp = edtNoTelp.getText().toString().trim();
 
-        ConfigRetrofit.service.updateData(id, nim, nama, alamat, notelp).enqueue(new Callback<ResponsModel>() {
+        ConfigRetrofit.service.updateData(id, nim, nama, alamat, notelp).enqueue(new Callback<ResponsMahasiswa>() {
             @Override
-            public void onResponse(Call<ResponsModel> call, Response<ResponsModel> response) {
+            public void onResponse(Call<ResponsMahasiswa> call, Response<ResponsMahasiswa> response) {
 
                 String kode = response.body().getKode();
 
@@ -85,7 +85,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
 
         @Override
-        public void onFailure (Call < ResponsModel > call, Throwable t){
+        public void onFailure (Call <ResponsMahasiswa> call, Throwable t){
             Log.d("Server Error", t.getMessage());
 
         }
@@ -97,9 +97,9 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
     @OnClick(R.id.btnDelete)
     void Delete(){
 
-        ConfigRetrofit.service.deleteData(id).enqueue(new Callback<ResponsModel>() {
+        ConfigRetrofit.service.deleteData(id).enqueue(new Callback<ResponsMahasiswa>() {
             @Override
-            public void onResponse(Call<ResponsModel> call, Response<ResponsModel> response) {
+            public void onResponse(Call<ResponsMahasiswa> call, Response<ResponsMahasiswa> response) {
                 String kode = response.body().getKode();
                 Log.d("Delete Data","Hasilnya adalah -> " + response.body().getKode());
                 if (kode.equals("1")){
@@ -117,7 +117,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
 
             @Override
-            public void onFailure(Call<ResponsModel> call, Throwable t) {
+            public void onFailure(Call<ResponsMahasiswa> call, Throwable t) {
                 Log.d("Server Error", t.getMessage());
             }
         });

@@ -18,10 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mahasiswa.ReadMahasiswaActivity" />
-        <activity android:name=".mahasiswa.DosenActivity" />
-        <activity android:name=".mahasiswa.AddMahasiswaActivity" />
-        <activity android:name=".mahasiswa.DetailMahasiswaActivity"></activity>
+        <activity android:name=".admin.mahasiswa.ReadMahasiswaActivity" />
+        <activity android:name=".admin.dosen.DosenActivity" />
+        <activity android:name=".admin.mahasiswa.AddMahasiswaActivity" />
+        <activity android:name=".admin.mahasiswa.DetailMahasiswaActivity" />
+        <activity android:name=".admin.dosen.DetailDosen" />
+        <activity android:name=".admin.dosen.AddDosen"></activity>
     </application>
 
 </manifest>
