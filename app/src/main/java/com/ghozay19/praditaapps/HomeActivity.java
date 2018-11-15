@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.ghozay19.praditaapps.admin.dosen.DosenActivity;
-import com.ghozay19.praditaapps.admin.mahasiswa.ReadMahasiswaActivity;
+import com.ghozay19.praditaapps.main.admin.dosen.DosenActivity;
+import com.ghozay19.praditaapps.main.admin.mahasiswa.ReadMahasiswaActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

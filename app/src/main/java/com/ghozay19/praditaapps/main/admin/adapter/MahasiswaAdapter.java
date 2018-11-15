@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.admin.adapter;
+package com.ghozay19.praditaapps.main.admin.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ghozay19.praditaapps.admin.mahasiswa.DetailMahasiswaActivity;
+import com.ghozay19.praditaapps.main.admin.mahasiswa.DetailMahasiswaActivity;
 import com.ghozay19.praditaapps.model.Mahasiswa;
 import com.ghozay19.praditaapps.R;
 

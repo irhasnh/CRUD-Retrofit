@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.admin.mahasiswa;
+package com.ghozay19.praditaapps.main.admin.mahasiswa;
 
 import android.content.Intent;
 import android.os.Bundle;

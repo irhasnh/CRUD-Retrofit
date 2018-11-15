@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.admin.dosen;
+package com.ghozay19.praditaapps.main.admin.dosen;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.ghozay19.praditaapps.HomeActivity;
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.admin.mahasiswa.AddMahasiswaActivity;
+import com.ghozay19.praditaapps.main.admin.mahasiswa.AddMahasiswaActivity;
 import com.ghozay19.praditaapps.model.ResponsMahasiswa;
 import com.ghozay19.praditaapps.model.ResponseDosen;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;

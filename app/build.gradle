@@ -9,7 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "BASE_URL", "\"http://gojaydroid.000webhostapp.com/crud/\""
+        buildConfigField "String", "BASE_URL", "\"http://http://192.168.88.15/android/android/\""
         buildConfigField "String", "INSERT_MAHASISWA", "\"mahasiswa/insert.php\""
         buildConfigField "String", "READ_MAHASISWA", "\"mahasiswa/read.php\""
         buildConfigField "String", "UPDATE_MAHASISWA", "\"mahasiswa/update.php\""
