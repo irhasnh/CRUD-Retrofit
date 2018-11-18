@@ -7,10 +7,7 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.ghozay19.praditaapps.HomeActivity;
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.main.admin.mahasiswa.DetailMahasiswaActivity;
-import com.ghozay19.praditaapps.model.ResponsMahasiswa;
 import com.ghozay19.praditaapps.model.ResponseDosen;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 

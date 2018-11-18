@@ -21,4 +21,7 @@
     <color name="account">#999999</color>
 
 
+    // TODO: 22/02/18
+    <color name="colorNavigationIcon">#dae9f6</color>
+    <color name="colorNavigationText">#ffffff</color>
 </resources>
