@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 import com.ghozay19.praditaapps.main.user.fragment.AccountFragment;
-import com.ghozay19.praditaapps.main.user.fragment.FavoriteFragment;
+import com.ghozay19.praditaapps.main.user.fragment.EventFragment;
 import com.ghozay19.praditaapps.main.user.fragment.HomeFragment;
 import com.ghozay19.praditaapps.main.user.fragment.JadwalFragment;
 
@@ -68,7 +68,7 @@ public class UserActivity extends AppCompatActivity  implements BottomNavigation
                 fragment = new JadwalFragment();
                 break;
             case R.id.favorite_menu:
-                fragment = new FavoriteFragment();
+                fragment = new EventFragment();
                 break;
             case R.id.account_menu:
                 fragment = new AccountFragment();

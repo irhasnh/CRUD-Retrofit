@@ -27,13 +27,12 @@ public class HomeFragment extends Fragment {
 
     SharedPrefManager sharedPrefManager;
     TextView tvResultNama, tvResultNim;
-    Button btnLogout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         sharedPrefManager = new SharedPrefManager(getContext());
 
@@ -45,19 +44,6 @@ public class HomeFragment extends Fragment {
 
 //        ActionProcessButton btnLogout = (ActionProcessButton) view.findViewById(R.id.btnLogout);
 //        btnLogout.setMode(ActionProcessButton.Mode.PROGRESS);
-
-        btnLogout = (Button) view.findViewById(R.id.btnLogout);
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, false);
-                startActivity(new Intent(getContext(), LoginActivity.class)
-                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
-                getActivity().finish();
-            }
-        });
-        return view;
+return view;
     }
-
 }

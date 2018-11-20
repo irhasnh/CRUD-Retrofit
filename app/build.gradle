@@ -9,7 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "BASE_URL", "\"http://192.168.88.15/android/\""
+        buildConfigField "String", "BASE_URL", "\"http://192.168.88.13/android/\""
         buildConfigField "String", "INSERT_MAHASISWA", "\"mahasiswa/insert.php\""
         buildConfigField "String", "READ_MAHASISWA", "\"mahasiswa/read.php\""
         buildConfigField "String", "UPDATE_MAHASISWA", "\"mahasiswa/update.php\""
@@ -24,6 +24,7 @@ android {
         buildConfigField "String", "UPDATE_MATAKULIAH", "\"matakuliah/update.php\""
         buildConfigField "String", "DELETE_MATAKULIAH", "\"matakuliah/delete.php\""
         buildConfigField "String", "READ_JADWAL", "\"jadwal/read.php\""
+        buildConfigField "String", "READ_EVENT", "\"jadwal/event.php\""
 
 
     }
@@ -63,4 +64,8 @@ dependencies {
 
     //todo kalo ga berhasil delete aja
     implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+
 }

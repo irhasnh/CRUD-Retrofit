@@ -9,7 +9,7 @@
     <string name="masukkan_no_telpon">Masukkan No Telpon</string>
     <string name="masukkan_nama">Masukkan Nama</string>
     <string name="masukkan_nim">Masukkan Nim</string>
-    <string name="action_settings">Setting</string>
+    <!--<string name="action_settings">Setting</string>-->
     <string name="delete">Delete</string>
     <string name="datasuksesperbarui">Data berhasil diperbaharui</string>
     <string name="dataerorperbarui">Data Error tidak berhasil diperbaharui</string>
@@ -29,4 +29,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="jadwal">Jadwal</string>
     <string name="event">Event</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="fragment_login_password_hint">Password</string>
 </resources>

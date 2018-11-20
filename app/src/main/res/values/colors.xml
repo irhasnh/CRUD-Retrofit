@@ -20,6 +20,11 @@
     <color name="divider_or">#999999</color>
     <color name="account">#999999</color>
 
+    <color name="amber200">#FFE082</color>
+    <color name="green500">#4CAF50</color>
+
+    <color name="orange600">#FB8C00</color>
+
 
     // TODO: 22/02/18
     <color name="colorNavigationIcon">#dae9f6</color>

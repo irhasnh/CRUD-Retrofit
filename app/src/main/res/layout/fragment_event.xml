@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.user.fragment.FavoriteFragment">
+    tools:context=".main.user.fragment.EventFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_jadwal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FAVORIT" />
-
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 </FrameLayout>
