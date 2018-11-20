@@ -1,21 +1,17 @@
-package com.ghozay19.praditaapps.model;
-
-import com.google.gson.annotations.SerializedName;
+package com.ghozay19.praditaapps.model.matakuliah;
 
 import java.util.List;
 
-
-public class ResponseDosen{
-
+public class ResponseMatakuliah {
 
 	String kode, pesan;
-	List<Dosen> result;
+	List<Matakuliah> result;
 
-	public List<Dosen> getResult() {
+	public List<Matakuliah> getResult() {
 		return result;
 	}
 
-	public void setResult(List<Dosen> result) {
+	public void setResult(List<Matakuliah> result) {
 		this.result = result;
 	}
 

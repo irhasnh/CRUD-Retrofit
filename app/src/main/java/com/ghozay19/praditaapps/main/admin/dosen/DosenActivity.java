@@ -12,13 +12,8 @@ import android.widget.Toast;
 
 import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.main.admin.adapter.DosenAdapter;
-import com.ghozay19.praditaapps.main.admin.adapter.MahasiswaAdapter;
-import com.ghozay19.praditaapps.main.admin.mahasiswa.AddMahasiswaActivity;
-import com.ghozay19.praditaapps.main.admin.mahasiswa.ReadMahasiswaActivity;
-import com.ghozay19.praditaapps.model.Dosen;
-import com.ghozay19.praditaapps.model.Mahasiswa;
-import com.ghozay19.praditaapps.model.ResponsMahasiswa;
-import com.ghozay19.praditaapps.model.ResponseDosen;
+import com.ghozay19.praditaapps.model.dosen.Dosen;
+import com.ghozay19.praditaapps.model.dosen.ResponseDosen;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 
 import java.util.ArrayList;

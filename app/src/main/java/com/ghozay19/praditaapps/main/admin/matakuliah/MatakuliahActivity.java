@@ -11,12 +11,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.main.admin.adapter.MahasiswaAdapter;
 import com.ghozay19.praditaapps.main.admin.adapter.MatakuliahAdapter;
-import com.ghozay19.praditaapps.main.admin.mahasiswa.ReadMahasiswaActivity;
-import com.ghozay19.praditaapps.model.Matakuliah;
-import com.ghozay19.praditaapps.model.ResponsMahasiswa;
-import com.ghozay19.praditaapps.model.ResponseMatakuliah;
+import com.ghozay19.praditaapps.model.matakuliah.Matakuliah;
+import com.ghozay19.praditaapps.model.matakuliah.ResponseMatakuliah;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 
 import java.util.ArrayList;

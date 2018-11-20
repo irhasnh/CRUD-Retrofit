@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.model.ResponseDosen;
+import com.ghozay19.praditaapps.model.dosen.ResponseDosen;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 
 import butterknife.BindView;

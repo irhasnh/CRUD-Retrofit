@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_gradient"
     tools:context=".LoginActivity">
 
@@ -47,14 +48,32 @@
             android:background="@drawable/bg_rectangle_edittext"
             android:textColor="#80FFFFFF"/>
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFF"
-            android:text="LOG IN"
-            android:background="@drawable/bg_rectangle_button"/>
+        <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Sign_in"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorNormal="@color/blue_normal"
+        custom:pb_colorPressed="@color/blue_pressed"
+        custom:pb_colorProgress="@color/purple_progress"
+        custom:pb_textComplete="Success"
+        custom:pb_textProgress="Loading"
+        custom:pb_textError="Error"
+        custom:pb_colorError="@color/red_error"
+        />
+
+        <!--<Button-->
+            <!--android:id="@+id/btnLogin"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#FFF"-->
+            <!--android:text="LOG IN"-->
+            <!--android:background="@drawable/bg_rectangle_button"/>-->
 
         <TextView
             android:layout_marginTop="8dp"

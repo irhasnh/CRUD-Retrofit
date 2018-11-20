@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import com.ghozay19.praditaapps.fragment.AccountFragment;
-import com.ghozay19.praditaapps.fragment.FavoriteFragment;
-import com.ghozay19.praditaapps.fragment.HomeFragment;
-import com.ghozay19.praditaapps.fragment.SearchFragment;
+import com.ghozay19.praditaapps.main.user.fragment.AccountFragment;
+import com.ghozay19.praditaapps.main.user.fragment.FavoriteFragment;
+import com.ghozay19.praditaapps.main.user.fragment.HomeFragment;
+import com.ghozay19.praditaapps.main.user.fragment.JadwalFragment;
 
 import butterknife.BindView;
 
@@ -27,8 +27,8 @@ public class UserActivity extends AppCompatActivity  implements BottomNavigation
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        getSupportActionBar().hide();
-
+//        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Pradita Mobile");
 
         sharedPrefManager = new SharedPrefManager(this);
 
@@ -65,7 +65,7 @@ public class UserActivity extends AppCompatActivity  implements BottomNavigation
                 fragment = new HomeFragment();
                 break;
             case R.id.search_menu:
-                fragment = new SearchFragment();
+                fragment = new JadwalFragment();
                 break;
             case R.id.favorite_menu:
                 fragment = new FavoriteFragment();

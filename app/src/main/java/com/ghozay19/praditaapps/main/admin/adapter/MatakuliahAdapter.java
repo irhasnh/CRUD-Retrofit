@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.main.admin.matakuliah.DetailMatakuliah;
-import com.ghozay19.praditaapps.model.Matakuliah;
+import com.ghozay19.praditaapps.model.matakuliah.Matakuliah;
 
 import java.util.List;
 

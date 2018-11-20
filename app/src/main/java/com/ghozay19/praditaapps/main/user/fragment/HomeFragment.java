@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.fragment;
+package com.ghozay19.praditaapps.main.user.fragment;
 
 
 import android.content.Intent;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.dd.processbutton.iml.ActionProcessButton;
 import com.ghozay19.praditaapps.LoginActivity;
 import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.SharedPrefManager;
@@ -25,7 +26,7 @@ public class HomeFragment extends Fragment {
     }
 
     SharedPrefManager sharedPrefManager;
-    TextView tvResultNama;
+    TextView tvResultNama, tvResultNim;
     Button btnLogout;
 
     @Override
@@ -36,8 +37,14 @@ public class HomeFragment extends Fragment {
 
         sharedPrefManager = new SharedPrefManager(getContext());
 
+        tvResultNim = (TextView) view.findViewById(R.id.userNim);
         tvResultNama = (TextView) view.findViewById(R.id.userName);
-        tvResultNama.setText(sharedPrefManager.getSPNama() + " (" +sharedPrefManager.getSPNim() +" )");
+
+        tvResultNim.setText(sharedPrefManager.getSPNim());
+        tvResultNama.setText(sharedPrefManager.getSPNama());
+
+//        ActionProcessButton btnLogout = (ActionProcessButton) view.findViewById(R.id.btnLogout);
+//        btnLogout.setMode(ActionProcessButton.Mode.PROGRESS);
 
         btnLogout = (Button) view.findViewById(R.id.btnLogout);
 

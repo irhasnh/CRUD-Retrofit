@@ -8,7 +8,6 @@ import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.main.admin.dosen.DosenActivity;
 import com.ghozay19.praditaapps.main.admin.mahasiswa.ReadMahasiswaActivity;
 import com.ghozay19.praditaapps.main.admin.matakuliah.MatakuliahActivity;
-import com.ghozay19.praditaapps.model.Matakuliah;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

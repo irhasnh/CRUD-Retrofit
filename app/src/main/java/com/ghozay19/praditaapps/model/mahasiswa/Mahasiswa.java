@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.model;
+package com.ghozay19.praditaapps.model.mahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,8 +1,9 @@
 package com.ghozay19.praditaapps.network;
 
-import com.ghozay19.praditaapps.model.ResponsMahasiswa;
-import com.ghozay19.praditaapps.model.ResponseDosen;
-import com.ghozay19.praditaapps.model.ResponseMatakuliah;
+import com.ghozay19.praditaapps.model.jadwal.ResponseJadwal;
+import com.ghozay19.praditaapps.model.mahasiswa.ResponsMahasiswa;
+import com.ghozay19.praditaapps.model.dosen.ResponseDosen;
+import com.ghozay19.praditaapps.model.matakuliah.ResponseMatakuliah;
 
 
 import okhttp3.ResponseBody;
@@ -20,6 +21,7 @@ import static com.ghozay19.praditaapps.BuildConfig.INSERT_MAHASISWA;
 import static com.ghozay19.praditaapps.BuildConfig.INSERT_MATAKULIAH;
 import static com.ghozay19.praditaapps.BuildConfig.LOGIN_USER;
 import static com.ghozay19.praditaapps.BuildConfig.READ_DOSEN;
+import static com.ghozay19.praditaapps.BuildConfig.READ_JADWAL;
 import static com.ghozay19.praditaapps.BuildConfig.READ_MAHASISWA;
 import static com.ghozay19.praditaapps.BuildConfig.READ_MATAKULIAH;
 import static com.ghozay19.praditaapps.BuildConfig.UPDATE_DOSEN;
@@ -38,6 +40,13 @@ public interface ApiService {
     Call<ResponseBody> loginRequest(@Field("email") String email,
                                     @Field("encrypted_password") String encrypted_password);
 
+
+    /**
+     * Jadwal
+     **/
+
+    @GET(READ_JADWAL)
+    Call<ResponseJadwal> getAllJadwal();
 
     /**
      * Matakuliah

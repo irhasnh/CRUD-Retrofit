@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.fragment;
+package com.ghozay19.praditaapps.main.user.fragment;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.ghozay19.praditaapps.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AccountFragment extends Fragment {
+public class FavoriteFragment extends Fragment {
 
 
-    public AccountFragment() {
+    public FavoriteFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class AccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        return inflater.inflate(R.layout.fragment_favorite, container, false);
     }
 
 }

@@ -7,6 +7,7 @@
 
     <!--Content Main-->
     <FrameLayout
+        android:layout_above="@+id/bn_main"
         android:id="@+id/fl_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

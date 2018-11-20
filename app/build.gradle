@@ -23,6 +23,9 @@ android {
         buildConfigField "String", "READ_MATAKULIAH", "\"matakuliah/read.php\""
         buildConfigField "String", "UPDATE_MATAKULIAH", "\"matakuliah/update.php\""
         buildConfigField "String", "DELETE_MATAKULIAH", "\"matakuliah/delete.php\""
+        buildConfigField "String", "READ_JADWAL", "\"jadwal/read.php\""
+
+
     }
     buildTypes {
         release {
@@ -55,4 +58,9 @@ dependencies {
 
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //todo kalo ga berhasil delete aja
+    implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
 }

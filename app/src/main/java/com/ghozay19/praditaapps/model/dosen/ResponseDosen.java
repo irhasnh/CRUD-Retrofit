@@ -1,17 +1,19 @@
-package com.ghozay19.praditaapps.model;
+package com.ghozay19.praditaapps.model.dosen;
 
 import java.util.List;
 
-public class ResponseMatakuliah {
+
+public class ResponseDosen{
+
 
 	String kode, pesan;
-	List<Matakuliah> result;
+	List<Dosen> result;
 
-	public List<Matakuliah> getResult() {
+	public List<Dosen> getResult() {
 		return result;
 	}
 
-	public void setResult(List<Matakuliah> result) {
+	public void setResult(List<Dosen> result) {
 		this.result = result;
 	}
 

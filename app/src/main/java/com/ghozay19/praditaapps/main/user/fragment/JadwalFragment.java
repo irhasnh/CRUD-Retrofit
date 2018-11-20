@@ -63,7 +63,7 @@ public class JadwalFragment extends Fragment {
 
     private void readAllJadwal() {
 
-        final ProgressDialog dialog = ProgressDialog.show(context, "", "Fetching Data....", false);
+        final ProgressDialog dialog = ProgressDialog.show(getContext(), "", "Fetching Data....", false);
 
         ConfigRetrofit.service.getAllJadwal().enqueue(new Callback<ResponseJadwal>() {
             @Override
@@ -73,7 +73,7 @@ public class JadwalFragment extends Fragment {
                 mItems = response.body().getResult();
                 Log.d("Read Data","Hasilnya adalah -> " + response.body().getKode());
 
-                recyclerView.setAdapter(new JadwalAdapter(getContext(),mItems));
+                recyclerView.setAdapter(new JadwalAdapter(getActivity(),mItems));
                 adapter.notifyDataSetChanged();
 
             }
@@ -83,7 +83,7 @@ public class JadwalFragment extends Fragment {
                 dialog.dismiss();
 
                 Log.d("Read Data Error ","Karena -> "+t.getMessage());
-                Toast.makeText(getContext(), " Koneksi EROR",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), " Koneksi EROR",Toast.LENGTH_SHORT).show();
             }
         });
 

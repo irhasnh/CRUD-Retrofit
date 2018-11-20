@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.main.admin.adapter.MahasiswaAdapter;
-import com.ghozay19.praditaapps.model.Mahasiswa;
-import com.ghozay19.praditaapps.model.ResponsMahasiswa;
+import com.ghozay19.praditaapps.model.mahasiswa.Mahasiswa;
+import com.ghozay19.praditaapps.model.mahasiswa.ResponsMahasiswa;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 
 import java.util.ArrayList;

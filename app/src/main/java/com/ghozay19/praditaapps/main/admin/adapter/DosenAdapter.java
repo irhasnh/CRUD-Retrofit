@@ -10,9 +10,7 @@ import android.widget.TextView;
 
 import com.ghozay19.praditaapps.R;
 import com.ghozay19.praditaapps.main.admin.dosen.DetailDosen;
-import com.ghozay19.praditaapps.main.admin.mahasiswa.DetailMahasiswaActivity;
-import com.ghozay19.praditaapps.model.Dosen;
-import com.ghozay19.praditaapps.model.Mahasiswa;
+import com.ghozay19.praditaapps.model.dosen.Dosen;
 
 import java.util.List;
 
