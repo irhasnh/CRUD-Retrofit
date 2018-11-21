@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.admin.HomeActivity">
+    tools:context=".HomeActivity">
 
     <ImageView
         android:id="@+id/btnReadMahasiswa"
@@ -14,30 +14,6 @@
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:src="@drawable/ic_launcher_background"/>
-
-
-    <ImageView
-        android:layout_toRightOf="@id/btnReadMahasiswa"
-        android:id="@+id/btnreadDosen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_margin="16dp"/>
-
-    <ImageView
-        android:layout_below="@id/btnReadMahasiswa"
-        android:id="@+id/btnreadMatakuliah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_margin="16dp"
-        />
 
 
 
