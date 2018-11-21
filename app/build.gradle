@@ -9,7 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "BASE_URL", "\"http://gojaydroid.000webhostapp.com/crud/\""
+        buildConfigField "String", "BASE_URL", "\"http://192.168.88.13/android/\""
         buildConfigField "String", "INSERT_MAHASISWA", "\"mahasiswa/insert.php\""
         buildConfigField "String", "READ_MAHASISWA", "\"mahasiswa/read.php\""
         buildConfigField "String", "UPDATE_MAHASISWA", "\"mahasiswa/update.php\""
@@ -18,7 +18,15 @@ android {
         buildConfigField "String", "READ_DOSEN", "\"dosen/read.php\""
         buildConfigField "String", "UPDATE_DOSEN", "\"dosen/update.php\""
         buildConfigField "String", "DELETE_DOSEN", "\"dosen/delete.php\""
-        buildConfigField "String", "REQ_LOGIN", "\"user/login_user.php\""
+        buildConfigField "String", "LOGIN_USER", "\"user/login.php\""
+        buildConfigField "String", "INSERT_MATAKULIAH", "\"matakuliah/insert.php\""
+        buildConfigField "String", "READ_MATAKULIAH", "\"matakuliah/read.php\""
+        buildConfigField "String", "UPDATE_MATAKULIAH", "\"matakuliah/update.php\""
+        buildConfigField "String", "DELETE_MATAKULIAH", "\"matakuliah/delete.php\""
+        buildConfigField "String", "READ_JADWAL", "\"jadwal/read.php\""
+        buildConfigField "String", "READ_EVENT", "\"jadwal/event.php\""
+
+
     }
     buildTypes {
         release {
@@ -31,15 +39,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 
-    implementation 'com.android.support:recyclerview-v7:28.0.0-rc02'
-    implementation 'com.android.support:cardview-v7:28.0.0-rc02'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
 
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
@@ -48,6 +57,15 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-    implementation 'com.android.support:design:28.0.0-rc02'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //todo kalo ga berhasil delete aja
+    implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
 
 }
