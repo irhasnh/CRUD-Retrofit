@@ -11,32 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.admin.mahasiswa.ReadMahasiswaActivity" />
-        <activity android:name=".main.admin.dosen.DosenActivity" />
-        <activity android:name=".main.admin.mahasiswa.AddMahasiswaActivity" />
-        <activity android:name=".main.admin.mahasiswa.DetailMahasiswaActivity" />
-        <activity android:name=".main.admin.dosen.DetailDosen" />
-        <activity android:name=".main.admin.dosen.AddDosen" />
-        <activity android:name=".main.user.MahasiswaUserActivity" />
-        <activity android:name=".main.user.DosenUserActivity" />
-        <activity android:name=".main.user.MatakuliahUserActivity" />
-        <activity android:name=".main.user.HomeUserActivity" />
-        <activity android:name=".main.admin.matakuliah.MatakuliahActivity" />
-        <activity android:name=".main.admin.matakuliah.AddMatakuliahActivity" />
-        <activity android:name=".main.admin.matakuliah.DetailMatakuliah" />
-        <activity android:name=".main.admin.HomeActivity" />
-        <activity android:name=".UserActivity" />
-        <activity
-            android:name=".userVersion2.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".mahasiswa.ReadMahasiswaActivity" />
+        <activity android:name=".mahasiswa.DosenActivity" />
+        <activity android:name=".mahasiswa.AddMahasiswaActivity" />
+        <activity android:name=".mahasiswa.DetailMahasiswaActivity"></activity>
     </application>
 
 </manifest>
