@@ -1,11 +1,9 @@
 package com.ghozay19.praditaapps.network;
 
-import com.ghozay19.praditaapps.model.event.ResponseEvent;
+import com.ghozay19.praditaapps.model.dosen.ResponseDosen;
 import com.ghozay19.praditaapps.model.jadwal.ResponseJadwal;
 import com.ghozay19.praditaapps.model.mahasiswa.ResponsMahasiswa;
-import com.ghozay19.praditaapps.model.dosen.ResponseDosen;
 import com.ghozay19.praditaapps.model.matakuliah.ResponseMatakuliah;
-
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -23,7 +21,6 @@ import static com.ghozay19.praditaapps.BuildConfig.INSERT_MATAKULIAH;
 import static com.ghozay19.praditaapps.BuildConfig.LOGIN_ADMIN;
 import static com.ghozay19.praditaapps.BuildConfig.LOGIN_USER;
 import static com.ghozay19.praditaapps.BuildConfig.READ_DOSEN;
-import static com.ghozay19.praditaapps.BuildConfig.READ_EVENT;
 import static com.ghozay19.praditaapps.BuildConfig.READ_JADWAL;
 import static com.ghozay19.praditaapps.BuildConfig.READ_MAHASISWA;
 import static com.ghozay19.praditaapps.BuildConfig.READ_MATAKULIAH;
@@ -60,13 +57,6 @@ public interface ApiService {
 
     @GET(READ_JADWAL)
     Call<ResponseJadwal> getAllJadwal();
-
-    /**
-     * Event
-     **/
-
-    @GET(READ_EVENT)
-    Call<ResponseEvent> getAllEvent();
 
     /**
      * Matakuliah

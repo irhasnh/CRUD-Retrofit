@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.ghozay19.praditaapps.LoginActivity;
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.SharedPrefManager;
+import com.ghozay19.praditaapps.utils.SharedPrefManager;
 import com.ghozay19.praditaapps.main.admin.dosen.DosenActivity;
 import com.ghozay19.praditaapps.main.admin.mahasiswa.ReadMahasiswaActivity;
 import com.ghozay19.praditaapps.main.admin.matakuliah.MatakuliahActivity;

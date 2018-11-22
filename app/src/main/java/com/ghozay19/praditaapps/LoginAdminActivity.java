@@ -10,14 +10,13 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dd.processbutton.iml.ActionProcessButton;
 import com.ghozay19.praditaapps.main.admin.HomeActivity;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
-import com.ghozay19.praditaapps.userVersion2.MainActivity;
+import com.ghozay19.praditaapps.utils.SharedPrefManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,7 +58,6 @@ public class LoginAdminActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_admin);
-        getSupportActionBar().hide();
 
         ButterKnife.bind(this);
         mContext = this;
@@ -70,6 +68,7 @@ public class LoginAdminActivity extends AppCompatActivity  {
                 // your code here...
                 btnLogin.setProgress(0);
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+                btnLogin.setEnabled(true);
                 return false;
             }
         });
@@ -78,6 +77,7 @@ public class LoginAdminActivity extends AppCompatActivity  {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
+                btnLogin.setEnabled(true);
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
                 return false;
             }
@@ -96,7 +96,7 @@ public class LoginAdminActivity extends AppCompatActivity  {
 
 
         // Code berikut berfungsi untuk mengecek session, Jika session true ( sudah login )
-        // maka langsung memulai MainActivity.
+        // maka langsung memulai HomeMainActivity.
         if (sharedPrefManager.getSPSudahLogin()) {
             startActivity(new Intent(LoginAdminActivity.this, HomeActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));

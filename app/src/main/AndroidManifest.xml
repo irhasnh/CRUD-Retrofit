@@ -10,8 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".utils.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,12 +29,16 @@
         <activity android:name=".main.admin.matakuliah.DetailMatakuliah" />
         <activity android:name=".main.admin.HomeActivity" />
         <activity android:name=".main.user.UserActivity" />
+        <activity android:name=".LoginActivity"/>
         <activity
-            android:name=".userVersion2.MainActivity"
+            android:name=".main.user.HomeMainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoginAdminActivity" />
-        <activity android:name=".main.admin.AboutActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".LoginAdminActivity"
+            android:noHistory="true"/>
+        <activity android:name=".main.admin.AboutActivity"
+            ></activity>
     </application>
 
 </manifest>

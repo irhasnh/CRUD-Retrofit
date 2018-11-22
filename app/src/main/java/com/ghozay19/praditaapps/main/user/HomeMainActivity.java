@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps.userVersion2;
+package com.ghozay19.praditaapps.main.user;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,15 +15,14 @@ import android.view.MenuItem;
 import com.bumptech.glide.Glide;
 import com.ghozay19.praditaapps.LoginActivity;
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.SharedPrefManager;
-import com.ghozay19.praditaapps.main.user.fragment.EventFragment;
+import com.ghozay19.praditaapps.utils.SharedPrefManager;
 import com.ghozay19.praditaapps.main.user.fragment.HomeFragment;
 import com.ghozay19.praditaapps.main.user.fragment.JadwalFragment;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-public class MainActivity extends AppCompatActivity
+public class HomeMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     SharedPrefManager sharedPrefManager;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         profileCircleImageView = (CircleImageView) navigationView.getHeaderView(0).findViewById(R.id.imageView);
 
-        Glide.with(MainActivity.this)
+        Glide.with(HomeMainActivity.this)
                 .load(profileImageUrl)
                 .into(profileCircleImageView);
         navigationView.setNavigationItemSelectedListener(this);
@@ -148,12 +147,6 @@ public class MainActivity extends AppCompatActivity
 
             title = "Jadwal";
             fragment = new JadwalFragment();
-            fragment.setArguments(bundle);
-
-        }else if (id == R.id.nav_favourite) {
-
-            title = "Event";
-            fragment = new EventFragment();
             fragment.setArguments(bundle);
 
         }else if(id == R.id.nav_Logout){

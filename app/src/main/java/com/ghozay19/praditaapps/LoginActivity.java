@@ -10,13 +10,13 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dd.processbutton.iml.ActionProcessButton;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
-import com.ghozay19.praditaapps.userVersion2.MainActivity;
+import com.ghozay19.praditaapps.main.user.HomeMainActivity;
+import com.ghozay19.praditaapps.utils.SharedPrefManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         ButterKnife.bind(this);
         mContext = this;
@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
+                btnLogin.setEnabled(false);
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
                 return false;
             }
@@ -77,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
-                etPassword.setText("");
+                btnLogin.setEnabled(false);
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
                 return false;
             }
@@ -96,9 +97,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
         // Code berikut berfungsi untuk mengecek session, Jika session true ( sudah login )
-        // maka langsung memulai MainActivity.
+        // maka langsung memulai HomeMainActivity.
         if (sharedPrefManager.getSPSudahLogin()) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class)
+            startActivity(new Intent(LoginActivity.this, HomeMainActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
             finish();
         }
@@ -129,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                                     // Shared Pref ini berfungsi untuk menjadi trigger session login
 
                                     sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
-                                    startActivity(new Intent(mContext, MainActivity.class)
+                                    startActivity(new Intent(mContext, HomeMainActivity.class)
                                             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                                     finish();
                                     btnLogin.setProgress(100);

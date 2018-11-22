@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps;
+package com.ghozay19.praditaapps.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

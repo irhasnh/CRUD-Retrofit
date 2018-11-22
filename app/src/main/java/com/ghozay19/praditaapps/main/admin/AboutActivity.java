@@ -1,5 +1,6 @@
 package com.ghozay19.praditaapps.main.admin;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -24,8 +25,7 @@ ImageView images;
         setContentView(R.layout.activity_about);
 
          images = findViewById(R.id.cImageView);
-
-        getSupportActionBar().setTitle("About Apps");
+        ActionBar actionBar = getSupportActionBar();
 
         Glide.with(this)
                 .load(image)

@@ -8,7 +8,6 @@ import java.util.List;
 public class ResponseJadwal{
 
 
-
 		String kode, pesan;
 		List<Jadwal> result;
 

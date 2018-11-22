@@ -1,19 +1,15 @@
 package com.ghozay19.praditaapps.main.user.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.dd.processbutton.iml.ActionProcessButton;
-import com.ghozay19.praditaapps.LoginActivity;
 import com.ghozay19.praditaapps.R;
-import com.ghozay19.praditaapps.SharedPrefManager;
+import com.ghozay19.praditaapps.utils.SharedPrefManager;
 
 /**
  * A simple {@link Fragment} subclass.
