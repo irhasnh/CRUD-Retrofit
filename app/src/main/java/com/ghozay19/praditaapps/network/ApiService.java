@@ -20,6 +20,7 @@ import static com.ghozay19.praditaapps.BuildConfig.DELETE_MATAKULIAH;
 import static com.ghozay19.praditaapps.BuildConfig.INSERT_DOSEN;
 import static com.ghozay19.praditaapps.BuildConfig.INSERT_MAHASISWA;
 import static com.ghozay19.praditaapps.BuildConfig.INSERT_MATAKULIAH;
+import static com.ghozay19.praditaapps.BuildConfig.LOGIN_ADMIN;
 import static com.ghozay19.praditaapps.BuildConfig.LOGIN_USER;
 import static com.ghozay19.praditaapps.BuildConfig.READ_DOSEN;
 import static com.ghozay19.praditaapps.BuildConfig.READ_EVENT;
@@ -33,13 +34,23 @@ import static com.ghozay19.praditaapps.BuildConfig.UPDATE_MATAKULIAH;
 public interface ApiService {
 
 
-    /*
+    /**
     * Login User
-     */
+     **/
 
     @FormUrlEncoded
     @POST(LOGIN_USER)
     Call<ResponseBody> loginRequest(@Field("email") String email,
+                                    @Field("encrypted_password") String encrypted_password);
+
+
+    /**
+     * Login Admin
+     **/
+
+    @FormUrlEncoded
+    @POST(LOGIN_ADMIN)
+    Call<ResponseBody> loginAdminRequest(@Field("email") String email,
                                     @Field("encrypted_password") String encrypted_password);
 
 

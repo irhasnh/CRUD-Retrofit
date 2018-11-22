@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dd.processbutton.iml.ActionProcessButton;
+import com.ghozay19.praditaapps.main.admin.HomeActivity;
 import com.ghozay19.praditaapps.network.ConfigRetrofit;
 import com.ghozay19.praditaapps.userVersion2.MainActivity;
 
@@ -31,7 +32,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginAdminActivity extends AppCompatActivity  {
+
+    @OnClick(R.id.btnUser)
+    void admin() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 
     @BindView(R.id.etEmail)
     EditText etEmail;
@@ -44,12 +51,6 @@ public class LoginActivity extends AppCompatActivity {
     ActionProcessButton btnLogin;
     Context mContext;
 
-    @OnClick(R.id.btnAdmin)
-    void admin() {
-        Intent intent = new Intent(this, LoginAdminActivity.class);
-        startActivity(intent);
-    }
-
     SharedPrefManager sharedPrefManager;
 
     //ActionProcessButton btnLogin;
@@ -57,14 +58,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_admin);
         getSupportActionBar().hide();
 
         ButterKnife.bind(this);
         mContext = this;
         sharedPrefManager = new SharedPrefManager(this);
 
-        etEmail.setOnTouchListener(new View.OnTouchListener() {
+        etEmail.setOnTouchListener(new View.OnTouchListener(){
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
@@ -73,11 +74,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        etPassword.setOnTouchListener(new View.OnTouchListener() {
+        etPassword.setOnTouchListener(new View.OnTouchListener(){
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 // your code here...
                 btnLogin.setProgress(0);
-                etPassword.setText("");
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
                 return false;
             }
@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
         // Code berikut berfungsi untuk mengecek session, Jika session true ( sudah login )
         // maka langsung memulai MainActivity.
         if (sharedPrefManager.getSPSudahLogin()) {
-            startActivity(new Intent(LoginActivity.this, MainActivity.class)
+            startActivity(new Intent(LoginAdminActivity.this, HomeActivity.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
             finish();
         }
@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void requestLogin() {
 
-        ConfigRetrofit.service.loginRequest(etEmail.getText().toString(), etPassword.getText().toString())
+        ConfigRetrofit.service.loginAdminRequest(etEmail.getText().toString(), etPassword.getText().toString())
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -122,14 +122,12 @@ public class LoginActivity extends AppCompatActivity {
                                     // akan diparsing ke activity selanjutnya.
 
                                     Toast.makeText(mContext, "BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
-                                    String nim = jsonRESULTS.getJSONObject("user").getString("nim");
                                     String nama = jsonRESULTS.getJSONObject("user").getString("nama");
-                                    sharedPrefManager.saveSPString(SharedPrefManager.SP_NIM, nim);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_NAMA, nama);
                                     // Shared Pref ini berfungsi untuk menjadi trigger session login
 
                                     sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN, true);
-                                    startActivity(new Intent(mContext, MainActivity.class)
+                                    startActivity(new Intent(mContext, HomeActivity.class)
                                             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                                     finish();
                                     btnLogin.setProgress(100);

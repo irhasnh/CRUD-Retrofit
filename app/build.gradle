@@ -19,6 +19,8 @@ android {
         buildConfigField "String", "UPDATE_DOSEN", "\"dosen/update.php\""
         buildConfigField "String", "DELETE_DOSEN", "\"dosen/delete.php\""
         buildConfigField "String", "LOGIN_USER", "\"user/login.php\""
+        buildConfigField "String", "LOGIN_ADMIN", "\"admin/login.php\""
+
         buildConfigField "String", "INSERT_MATAKULIAH", "\"matakuliah/insert.php\""
         buildConfigField "String", "READ_MATAKULIAH", "\"matakuliah/read.php\""
         buildConfigField "String", "UPDATE_MATAKULIAH", "\"matakuliah/update.php\""

@@ -24,19 +24,17 @@
         <activity android:name=".main.admin.mahasiswa.DetailMahasiswaActivity" />
         <activity android:name=".main.admin.dosen.DetailDosen" />
         <activity android:name=".main.admin.dosen.AddDosen" />
-        <activity android:name=".main.user.MahasiswaUserActivity" />
-        <activity android:name=".main.user.DosenUserActivity" />
-        <activity android:name=".main.user.MatakuliahUserActivity" />
-        <activity android:name=".main.user.HomeUserActivity" />
         <activity android:name=".main.admin.matakuliah.MatakuliahActivity" />
         <activity android:name=".main.admin.matakuliah.AddMatakuliahActivity" />
         <activity android:name=".main.admin.matakuliah.DetailMatakuliah" />
         <activity android:name=".main.admin.HomeActivity" />
-        <activity android:name=".UserActivity" />
+        <activity android:name=".main.user.UserActivity" />
         <activity
             android:name=".userVersion2.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginAdminActivity" />
+        <activity android:name=".main.admin.AboutActivity"></activity>
     </application>
 
 </manifest>

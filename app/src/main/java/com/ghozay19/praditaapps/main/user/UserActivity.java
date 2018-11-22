@@ -1,4 +1,4 @@
-package com.ghozay19.praditaapps;
+package com.ghozay19.praditaapps.main.user;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.EditText;
 
+import com.ghozay19.praditaapps.R;
+import com.ghozay19.praditaapps.SharedPrefManager;
 import com.ghozay19.praditaapps.main.user.fragment.AccountFragment;
 import com.ghozay19.praditaapps.main.user.fragment.EventFragment;
 import com.ghozay19.praditaapps.main.user.fragment.HomeFragment;
@@ -38,8 +40,6 @@ public class UserActivity extends AppCompatActivity  implements BottomNavigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bn_main);
 // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-
-
 
 
 
