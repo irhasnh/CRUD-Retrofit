@@ -10,18 +10,47 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".utils.SplashScreen">
+=======
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity">
+>>>>>>> master
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".main.admin.mahasiswa.ReadMahasiswaActivity" />
+        <activity android:name=".main.admin.dosen.DosenActivity" />
+        <activity android:name=".main.admin.mahasiswa.AddMahasiswaActivity" />
+        <activity android:name=".main.admin.mahasiswa.DetailMahasiswaActivity" />
+        <activity android:name=".main.admin.dosen.DetailDosen" />
+        <activity android:name=".main.admin.dosen.AddDosen" />
+        <activity android:name=".main.admin.matakuliah.MatakuliahActivity" />
+        <activity android:name=".main.admin.matakuliah.AddMatakuliahActivity" />
+        <activity android:name=".main.admin.matakuliah.DetailMatakuliah" />
+        <activity android:name=".main.admin.HomeActivity" />
+        <activity android:name=".main.user.UserActivity" />
+        <activity android:name=".LoginActivity"/>
+        <activity
+            android:name=".main.user.HomeMainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".LoginAdminActivity"
+            android:noHistory="true"/>
+        <activity android:name=".main.admin.AboutActivity"
+            ></activity>
+=======
         <activity android:name=".mahasiswa.ReadMahasiswaActivity" />
         <activity android:name=".mahasiswa.DosenActivity" />
         <activity android:name=".mahasiswa.AddMahasiswaActivity" />
         <activity android:name=".mahasiswa.DetailMahasiswaActivity"></activity>
+>>>>>>> master
     </application>
 
 </manifest>
