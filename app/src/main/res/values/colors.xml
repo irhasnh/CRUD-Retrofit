@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!--<color name="colorPrimary">#d44b1d</color>-->
     <!--<color name="colorPrimaryDark">#d44b1d</color>-->
     <!--<color name="colorAccent">#d44b1d</color>-->
@@ -30,3 +31,9 @@
     <color name="colorNavigationIcon">#dae9f6</color>
     <color name="colorNavigationText">#ffffff</color>
 </resources>
+=======
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>
+>>>>>>> master
